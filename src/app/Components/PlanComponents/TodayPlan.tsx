@@ -2,12 +2,19 @@
 import { GymContext } from '@/app/GymContext/Context';
 import { IGymData } from '@/gym.type';
 import React, { useContext } from 'react';
+import { toast } from 'react-toastify';
 
 const TodayPlan = ({data}:{data:IGymData}) => {
     const {isToday,setIsToday}=useContext(GymContext)
+    
+    const dupliData=isToday.find(dup=>dup.id===data.id)
     const handleOnToday=()=>{
+        if(dupliData){
+            toast.error('Duplicate Detected')
+            return 
+        }
         setIsToday([...isToday,data])
-        alert('added')
+        toast.success(`${data.name} is Added to Today's Plan`)
     }
     return (
         <div>

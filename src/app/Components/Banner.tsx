@@ -18,7 +18,7 @@ const Banner = () => {
     
     <p className="text-gray-400 text-base md:text-lg max-w-xl leading-relaxed">
       FitLog is a dark, no-nonsense gym companion: pick a lift, lock it
-      into today's plan, and watch the week's work add up.
+      into today&apos;s plan, and watch the week&apos;s work add up.
     </p>
     
     <div className="pt-2">
@@ -29,7 +29,7 @@ const Banner = () => {
   </div>
 
   <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
-    <div className="relative w-full max-w-xs sm:max-w-md lg:max-w-lg aspect-[1280/2242] max-h-[450px]">
+    <div className="relative w-full max-w-xs sm:max-w-md lg:max-w-lg aspect-1280/2242 max-h-112.5">
       <Image 
         src={logo}
         alt="banner logo"

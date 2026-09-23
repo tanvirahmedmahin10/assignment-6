@@ -49,10 +49,10 @@ const GymCard = ({gym}:{gym:IGymData}) => {
       <span className='flex items-center'><Timer />{gym.duration} mins</span>
 
       {gym.rating && (
-        <span>★ {gym.rating.toFixed(1)}</span>
+        <span className='flex items-center'>★ {gym.rating.toFixed(1)}</span>
       )}
 
-      <span className='flex items-center'><Flame />{gym.caloriesBurned} kcal</span>
+      <span className='flex items-center'><Flame/>{gym.caloriesBurned} kcal</span>
       </div>
       </div>
     </div>

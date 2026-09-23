@@ -3,8 +3,6 @@
 import React, { useContext } from 'react';
 import { GymContext } from '../GymContext/Context';
 import { IGymData } from '@/gym.type';
-import TodayPlan from '../Components/PlanComponents/TodayPlan';
-import Saved from '../Components/PlanComponents/Saved';
 import GymCard from '../Components/GymData/GymCard';
 
 
@@ -17,10 +15,16 @@ const PlanPage = () => {
         
 <div className="tabs tabs-border">
   <input type="radio" name="my_tabs_2" className="tab" aria-label="Today's Plan" defaultChecked />
-  <div className="tab-content border-base-300 bg-base-100 p-10">{isToday.map((gym:IGymData)=><GymCard key={gym.id} gym={gym} ></GymCard>)}</div>
+  <div className="tab-content border-base-300 bg-base-100 p-10">
+    <div className="grid grid-cols-1 gap-5 w-fit">
+    {isToday.map((gym:IGymData)=><GymCard key={gym.id} gym={gym} ></GymCard>)}</div>
+    </div>
 
   <input type="radio" name="my_tabs_2" className="tab" aria-label="Saved"/>
-  <div className="tab-content border-base-300 bg-base-100 p-10">{isSaved.map((gym:IGymData)=><GymCard key={gym.id} gym={gym} ></GymCard>)}</div>
+  <div className="tab-content border-base-300 bg-base-100 p-10">
+    <div className="grid grid-cols-1 gap-5 w-fit">
+    {isSaved.map((gym:IGymData)=><GymCard key={gym.id} gym={gym} ></GymCard>)}</div>
+    </div>
 </div>
 </div>
     );
