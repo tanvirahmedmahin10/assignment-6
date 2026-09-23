@@ -21,6 +21,7 @@ const Navbar = () => {
         {link}
       </ul>
     </div>
+    <Link href='/' className='flex gap-2'>
     <div className='flex gap-2'>
       <Image
       src={logo}
@@ -30,6 +31,7 @@ const Navbar = () => {
       ></Image>
       <h2 className='font-semibold'>FITLOG</h2>
     </div>
+    </Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
