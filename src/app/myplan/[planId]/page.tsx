@@ -1,3 +1,5 @@
+import Saved from '@/app/Components/PlanComponents/Saved';
+import TodayPlan from '@/app/Components/PlanComponents/TodayPlan';
 import Image from 'next/image';
 import React from 'react';
 
@@ -90,13 +92,9 @@ const page = async({
         </div>
 
         <div className="flex gap-2 pt-2">
-          <button className="bg-[#ccff00] text-black text-xs font-bold px-4 py-2 rounded-lg hover:opacity-90">
-            Add to today's plan
-          </button>
+         <TodayPlan data={data}></TodayPlan>
           
-          <button className="border border-gray-700 text-white text-xs px-4 py-2 rounded-lg hover:bg-gray-800">
-            Save for later
-          </button>
+          <Saved data={data}></Saved>
         </div>
 
       </div>

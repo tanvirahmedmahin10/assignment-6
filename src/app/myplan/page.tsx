@@ -1,25 +1,29 @@
-import React from 'react';
-import { gymPromise } from '../Components/GymData/GymMap';
-import { IGymData } from '@/gym.type';
-import GymCard from '../Components/GymData/GymCard';
-import Link from 'next/link';
+'use client'
 
-const page = async() => {
-    const gymData=await gymPromise()
+import React, { useContext } from 'react';
+import { GymContext } from '../GymContext/Context';
+import { IGymData } from '@/gym.type';
+import TodayPlan from '../Components/PlanComponents/TodayPlan';
+import Saved from '../Components/PlanComponents/Saved';
+import GymCard from '../Components/GymData/GymCard';
+
+
+const PlanPage = () => {
+    const {isToday,isSaved}=useContext(GymContext)
     return (
         <div>
-            <h2>plan page</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-3xl font-bold text-white my-3">MY PLAN</h2>
+            <p className="text-gray-400 text-base md:text-lg max-w-xl leading-relaxed my-4">Cap of five lifts for today. Finish them, then load more.</p>
         
-        <div className="container mx-auto grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            
-            {
-              gymData.map((gym:IGymData)=><Link key={gym.id} href={`/myplan/${gym.id}`}>
-      <GymCard gym={gym} />
-    </Link>)  
-            }
-        </div>
-        </div>
+<div className="tabs tabs-border">
+  <input type="radio" name="my_tabs_2" className="tab" aria-label="Today's Plan" defaultChecked />
+  <div className="tab-content border-base-300 bg-base-100 p-10">{isToday.map((gym:IGymData)=><GymCard key={gym.id} gym={gym} ></GymCard>)}</div>
+
+  <input type="radio" name="my_tabs_2" className="tab" aria-label="Saved"/>
+  <div className="tab-content border-base-300 bg-base-100 p-10">{isSaved.map((gym:IGymData)=><GymCard key={gym.id} gym={gym} ></GymCard>)}</div>
+</div>
+</div>
     );
 };
 
-export default page;
+export default PlanPage;
