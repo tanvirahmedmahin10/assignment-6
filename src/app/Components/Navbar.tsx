@@ -1,10 +1,14 @@
+import Link from 'next/link';
 import React from 'react';
+import logo from '@/assets/logo.png'
+import Image from 'next/image';
 const link=<>
- <li><a>Item 1</a></li>
- <li><a>Item 3</a></li>
+ <li><Link href='/'>Workouts</Link></li>
+ <li><Link href='/myplan'>My Plan</Link></li>
 </>
 const Navbar = () => {
     return (
+      <div className='container mx-auto'>
         <div className="navbar bg-base-100 shadow-sm">
   <div className="navbar-start">
     <div className="dropdown">
@@ -17,16 +21,26 @@ const Navbar = () => {
         {link}
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
+    <div className='flex gap-2'>
+      <Image
+      src={logo}
+      alt='logo png'
+      height={28}
+      width={28}
+      ></Image>
+      <h2 className='font-semibold'>FITLOG</h2>
+    </div>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
     {link}
     </ul>
   </div>
-  <div className="navbar-end">
-    <a className="btn">Button</a>
+  <div className="navbar-end flex gap-4">
+    <Link href='/myplan'><button>Plan</button></Link>
+    <Link href='/myplan'><button>Saved</button></Link>
   </div>
+</div>
 </div>
     );
 };
