@@ -3,8 +3,8 @@
 import React, { useContext } from 'react';
 import { GymContext } from '../GymContext/Context';
 import { IGymData } from '@/gym.type';
-import GymCard from '../Components/GymData/GymCard';
 import PlanCard from '../Components/MyPlanData/PlanCard';
+import SavedCard from '../Components/MyPlanData/SavedCard';
 
 
 const PlanPage = () => {
@@ -25,7 +25,7 @@ const PlanPage = () => {
   <input type="radio" name="my_tabs_2" className="tab" aria-label="Saved"/>
   <div className="tab-content border-base-300 bg-base-100 p-10">
     <div className='grid grid-cols-1 gap-4'>
-    {isSaved.map((gym:IGymData)=><PlanCard key={gym.id} gym={gym} ></PlanCard>)}
+    {isSaved.map((gym:IGymData)=><SavedCard key={gym.id} gym={gym} ></SavedCard>)}
     </div>
     </div>
 </div>

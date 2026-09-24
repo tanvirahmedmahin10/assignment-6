@@ -6,7 +6,7 @@ import React from 'react';
 import MarkAsDoneButton from './PlanButtons/MarkAsDoneButton';
 import RemoveButton from './PlanButtons/RemoveButton';
 
-const PlanCard = ({ gym }: { gym: IGymData }) => {
+const SavedCard = ({ gym }: { gym: IGymData }) => {
     return (
        <div className="container mx-auto flex items-center justify-between rounded-2xl border border-slate-800 bg-[#0F172A] p-4 text-white">
   <div className="flex items-center gap-4 min-w-0">
@@ -59,12 +59,10 @@ const PlanCard = ({ gym }: { gym: IGymData }) => {
     </button>
     </Link>
     
-    <MarkAsDoneButton></MarkAsDoneButton>
-    
     <RemoveButton></RemoveButton>
   </div>
 </div>
     );
 };
 
-export default PlanCard;
+export default SavedCard;
