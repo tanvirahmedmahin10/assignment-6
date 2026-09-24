@@ -11,7 +11,7 @@ const ActivationLink = () => {
             <li>
         <Link
           href="/"
-          className={pathname === '/' ? 'text-blue-500 font-bold' : ''}
+          className={pathname === '/' ? 'text-[#C2F10D] font-bold' : ''}
         >
           Workouts
         </Link>

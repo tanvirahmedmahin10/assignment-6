@@ -1,6 +1,7 @@
 'use client'
 
 import { IGymData } from '@/gym.type';
+import { Check } from 'lucide-react';
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 
@@ -23,9 +24,9 @@ const MarkAsDoneButton = ({ gym }: { gym: IGymData }) => {
     <div>
       <button
         onClick={handleOnRead}
-        className="rounded-xl bg-[#C2F800] px-4 py-2 text-xs font-bold text-slate-950 cursor-pointer"
+        className="flex rounded-xl bg-[#C2F800] px-4 py-2 text-xs font-bold text-slate-950 cursor-pointer"
       >
-        {isMarked ? 'Marked' : 'Mark as Read'}
+        <Check className="h-4 w-4"/> {isMarked ? 'Marked' : `Mark as Done`}
       </button>
     </div>
   );
