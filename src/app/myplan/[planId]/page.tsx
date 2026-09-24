@@ -13,7 +13,7 @@ const page = async({
     const data=await res.json()
     return (
        <div className='containe mx-auto my-7'>
-        <div className="flex gap-5 bg-[#121318] text-white p-6 rounded-2xl max-w-3xl font-sans">
+        <div className="flex gap-10 bg-[#121318] text-white p-6 rounded-2xl w-fit font-sans">
       
     
       <div className="flex-1">

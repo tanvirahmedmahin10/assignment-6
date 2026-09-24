@@ -5,6 +5,7 @@ import { GymContext } from '../GymContext/Context';
 import { IGymData } from '@/gym.type';
 import PlanCard from '../Components/MyPlanData/PlanCard';
 import SavedCard from '../Components/MyPlanData/SavedCard';
+import Link from 'next/link';
 
 
 const PlanPage = () => {
@@ -40,10 +41,24 @@ const PlanPage = () => {
   />
 
   <div className="tab-content border-base-300 bg-base-100 p-10">
-    <div className="grid grid-cols-1 gap-4">
-      {sortForToday.map((gym: IGymData) => (
+    <div className="grid grid-cols-1 gap-4">{sortForToday.length>0?
+      sortForToday.map((gym: IGymData) => (
         <PlanCard key={gym.id} gym={gym} />
-      ))}
+      )):
+      <div className="flex min-h-[60vh] flex-col items-center justify-center text-center">
+  <h2 className="text-2xl font-bold">
+    Nothing Here yet
+  </h2>
+
+  <p className="mt-2 text-gray-400">
+    Browse the library and add a lift to get today moving.
+  </p>
+
+  <button className="mt-5 rounded-lg bg-[#C2F10D] px-5 py-2 font-semibold text-black cursor-pointer">
+    Go to Workout
+  </button>
+</div>
+      }
     </div>
   </div>
   <input
@@ -53,10 +68,25 @@ const PlanPage = () => {
     aria-label="Saved"
   />
   <div className="tab-content border-base-300 bg-base-100 p-10">
-    <div className="grid grid-cols-1 gap-4">
-      {sortForSaved.map((gym: IGymData) => (
+    <div className="grid grid-cols-1 gap-4">{sortForSaved.length>0?
+      sortForSaved.map((gym: IGymData) => (
         <SavedCard key={gym.id} gym={gym} />
-      ))}
+      )):
+       <div className="flex min-h-[60vh] flex-col items-center justify-center text-center">
+  <h2 className="text-2xl font-bold">
+    Nothing Here yet
+  </h2>
+
+  <p className="mt-2 text-gray-400">
+    Browse the library and add a lift to get today moving.
+  </p>
+  <Link href='/'>
+  <button className="mt-5 rounded-lg bg-[#C2F10D] px-5 py-2 font-semibold text-black cursor-pointer">
+    Go to Workout
+  </button>
+  </Link>
+</div>
+      }
     </div>
   </div>
   <div className='flex ml-auto gap-2 items-center'>
