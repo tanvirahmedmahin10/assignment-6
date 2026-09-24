@@ -2,13 +2,11 @@ import Link from 'next/link';
 import React from 'react';
 import logo from '@/assets/logo.png'
 import Image from 'next/image';
-const link=<>
- <li><Link href='/'>Workouts</Link></li>
- <li><Link href='/myplan'>My Plan</Link></li>
-</>
+import ActivationLink from './ActivationLink';
+
 const Navbar = () => {
     return (
-      <div className='container mx-auto'>
+      <div className='container mx-auto mb-10'>
         <div className="navbar bg-base-100 shadow-sm">
   <div className="navbar-start">
     <div className="dropdown">
@@ -18,7 +16,8 @@ const Navbar = () => {
       <ul
         tabIndex={-1}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        {link}
+          <ActivationLink></ActivationLink>
+        {/* {link} */}
       </ul>
     </div>
     <Link href='/' className='flex gap-2'>
@@ -35,7 +34,8 @@ const Navbar = () => {
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-    {link}
+      <ActivationLink></ActivationLink>
+    {/* {link} */}
     </ul>
   </div>
   <div className="navbar-end flex gap-4">

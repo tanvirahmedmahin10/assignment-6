@@ -17,8 +17,8 @@ const Saved = ({data}:{data:IGymData}) => {
     }
     return (
         <div>
-            <button onClick={handleOnSaved} className="border border-gray-700 text-white text-xs px-4 py-2 rounded-lg hover:bg-gray-800">
-            Save for later
+            <button onClick={handleOnSaved} className={dupliData?'bg-[#1f7be4] text-white text-xs px-4 py-2 rounded-lg':"border border-gray-700 text-white text-xs px-4 py-2 rounded-lg"}>
+            {dupliData?'Already Saved':`Save for Later`}
           </button>
         </div>
     );

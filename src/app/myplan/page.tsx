@@ -6,11 +6,14 @@ import { IGymData } from '@/gym.type';
 import PlanCard from '../Components/MyPlanData/PlanCard';
 import SavedCard from '../Components/MyPlanData/SavedCard';
 import Link from 'next/link';
+import Calculation from '../Components/Calculation';
 
 
 const PlanPage = () => {
     const {isToday,isSaved}=useContext(GymContext)
-     const [isSort,SetIsSort]=useState<'Duration'|'Calories'|'Rating'>('Duration')
+     const [isSort,SetIsSort]=useState<'Duration'|'Calories'|'Rating'>
+     ('Duration')
+     const [activeTab, setActiveTab] = useState<'today' | 'saved'>('today');
     const sorted=(sortData:IGymData[])=>{
      const sortinfo=[...sortData]
      if(isSort ==='Duration'){
@@ -30,7 +33,12 @@ const PlanPage = () => {
         <div className='container mx-auto'>
             <h2 className="text-3xl sm:text-4xl md:text-3xl font-bold text-white my-3">MY PLAN</h2>
             <p className="text-gray-400 text-base md:text-lg max-w-xl leading-relaxed my-4">Cap of five lifts for today. Finish them, then load more.</p>
-
+           <div>
+  <Calculation
+  gym={activeTab === 'today' ? sortForToday : sortForSaved}
+/>
+</div>
+     
 <div className="tabs tabs-border">
   <input
     type="radio"
@@ -38,6 +46,7 @@ const PlanPage = () => {
     className="tab"
     aria-label="Today's Plan"
     defaultChecked
+    onChange={() => setActiveTab('today')}
   />
 
   <div className="tab-content border-base-300 bg-base-100 p-10">
@@ -66,6 +75,7 @@ const PlanPage = () => {
     name="my_tabs_2"
     className="tab"
     aria-label="Saved"
+    onChange={() => setActiveTab('saved')}
   />
   <div className="tab-content border-base-300 bg-base-100 p-10">
     <div className="grid grid-cols-1 gap-4">{sortForSaved.length>0?
