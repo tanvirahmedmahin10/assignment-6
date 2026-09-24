@@ -9,7 +9,8 @@ import PlanButton from './NavBarButton/PlanButton2'; // Fixed casing from planbu
 
 const Navbar = () => {
     return (
-      <div className='container mx-auto mb-10'>
+      <div>
+      <div className='container mx-auto'>
         <div className="navbar bg-base-100 shadow-sm">
           <div className="navbar-start">
             <div className="dropdown">
@@ -46,7 +47,9 @@ const Navbar = () => {
             <SavedButton></SavedButton>
           </div>
         </div>
-        <div className="divider"></div>
+        
+      </div>
+      <div className="divider"></div>
       </div>
     );
 };

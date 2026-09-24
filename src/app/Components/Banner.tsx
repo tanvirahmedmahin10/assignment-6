@@ -4,7 +4,7 @@ import logo from '@/assets/banner.png'
 
 const Banner = () => {
     return (
-       <div className="container mx-auto px-12 py-10 md:py-16 rounded-2xl flex flex-col-reverse lg:flex-row items-center justify-between gap-8 lg:gap-12 bg-gray-800">
+       <div className="container mx-auto px-12 my-10 py-10 md:py-16 rounded-2xl flex flex-col-reverse lg:flex-row items-center justify-between gap-8 lg:gap-12 bg-gray-800">
   
   <div className="w-full lg:w-1/2 text-left space-y-4 md:space-y-6">
     <h2 className="text-xs md:text-sm font-bold tracking-widest text-[#C2F800] uppercase">
