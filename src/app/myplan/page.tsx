@@ -63,9 +63,11 @@ const PlanPage = () => {
     Browse the library and add a lift to get today moving.
   </p>
 
+  <Link href='/'>
   <button className="mt-5 rounded-lg bg-[#C2F10D] px-5 py-2 font-semibold text-black cursor-pointer">
     Go to Workout
   </button>
+  </Link>
 </div>
       }
     </div>
