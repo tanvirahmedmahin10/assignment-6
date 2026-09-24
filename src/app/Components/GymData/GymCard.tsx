@@ -13,7 +13,7 @@ const GymCard = ({gym}:{gym:IGymData}) => {
           width={500}
           height={600}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-cover transition-transform duration-500"
+          className="object-cover"
         />
 
         
