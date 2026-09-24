@@ -4,7 +4,9 @@ import Image from 'next/image';
 
 const Footer = () => {
     return (
-        <div className='mt-20 mb-10 container items-center mx-auto flex justify-between'>
+        <div>
+        <div className="divider mt-20"></div>
+        <div className='mt-6 mb-10 container items-center mx-auto flex justify-between'>
             <div className='flex gap-2 items-center'>
              <Image src={logo}
              alt='logo'
@@ -16,6 +18,7 @@ const Footer = () => {
              <h2 className='font-bold'>FITLOG</h2>
             </div>
             <p>© 2026 FitLog — Workout Library. Train hard, log honest</p>
+        </div>
         </div>
     );
 };
