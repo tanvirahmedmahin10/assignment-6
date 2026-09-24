@@ -11,7 +11,7 @@ const PlanButton = () => {
                 href="/myplan"
                 className="flex items-center gap-2 font-medium text-white">
                 <span>Plan</span>
-                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#C2F800] text-xs font-bold text-black">
+                <span className="flex min-w-6 h-6 items-center justify-center rounded-full bg-[#C2F800] px-2 text-xs font-bold text-black">
                     {isToday?.length || 0}
                 </span>
             </Link>

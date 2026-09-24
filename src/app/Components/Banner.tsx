@@ -22,9 +22,11 @@ const Banner = () => {
     </p>
     
     <div className="pt-2">
+      <a href="#library">
       <button className="bg-[#C2F800] hover:bg-[#b0e200] text-black font-bold py-3 px-6 rounded-lg transition-colors duration-200 text-sm md:text-base uppercase tracking-wider cursor-pointer">
         Browse Workouts
       </button>
+      </a>
     </div>
   </div>
 

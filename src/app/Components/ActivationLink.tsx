@@ -20,7 +20,7 @@ const ActivationLink = () => {
       <li>
         <Link
           href="/myplan"
-          className={pathname === '/myplan' ? 'text-blue-500 font-bold' : ''}
+          className={pathname === '/myplan' ? 'text-[#C2F10D] font-bold' : ''}
         >
           My Plan
         </Link>
