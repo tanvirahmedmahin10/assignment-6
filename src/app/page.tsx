@@ -8,7 +8,7 @@ export default function Home() {
       <Banner></Banner>
       <div id='library' className="container mx-auto my-15">
         <h2 className="text-2xl font-bold">THE LIBRARY</h2>
-        <p>Twelve lifts covering every major muscle group.</p>
+        <p className="text-gray-400">Twelve lifts covering every major muscle group.</p>
       </div>
       <GymMap></GymMap>
     </div>
