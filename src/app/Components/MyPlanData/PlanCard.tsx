@@ -59,9 +59,9 @@ const PlanCard = ({ gym }: { gym: IGymData }) => {
     </button>
     </Link>
     
-    <MarkAsDoneButton></MarkAsDoneButton>
+    <MarkAsDoneButton gym={gym}></MarkAsDoneButton>
     
-    <RemoveButton></RemoveButton>
+    <RemoveButton gym={gym}></RemoveButton>
   </div>
 </div>
     );

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import React from 'react';
 import MarkAsDoneButton from './PlanButtons/MarkAsDoneButton';
 import RemoveButton from './PlanButtons/RemoveButton';
+import RemoveButtonForSaved from './PlanButtons/RemoveButtonForSaved';
 
 const SavedCard = ({ gym }: { gym: IGymData }) => {
     return (
@@ -59,7 +60,7 @@ const SavedCard = ({ gym }: { gym: IGymData }) => {
     </button>
     </Link>
     
-    <RemoveButton></RemoveButton>
+    <RemoveButtonForSaved gym={gym}></RemoveButtonForSaved>
   </div>
 </div>
     );

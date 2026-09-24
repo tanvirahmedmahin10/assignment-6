@@ -5,11 +5,11 @@ import { Istok_Web } from 'next/font/google';
 import React, { useContext } from 'react';
 import { toast } from 'react-toastify';
 
-const RemoveButton = ({gym}:{gym:IGymData}) => {
-   const {isToday,setIsToday}=useContext(GymContext)
-   const removedData=isToday.filter(del=>del.id!==gym.id)
+const RemoveButtonForSaved = ({gym}:{gym:IGymData}) => {
+   const {isSaved,setIsSaved}=useContext(GymContext)
+   const removedData=isSaved.filter(del=>del.id!==gym.id)
    const handelRemove=()=>{
-    setIsToday(removedData)
+    setIsSaved(removedData)
     toast.error(`${gym.name} is Removed`)
    }
     return (
@@ -21,4 +21,4 @@ const RemoveButton = ({gym}:{gym:IGymData}) => {
     );
 };
 
-export default RemoveButton;
+export default RemoveButtonForSaved;
