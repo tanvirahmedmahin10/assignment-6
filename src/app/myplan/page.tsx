@@ -4,6 +4,7 @@ import React, { useContext } from 'react';
 import { GymContext } from '../GymContext/Context';
 import { IGymData } from '@/gym.type';
 import GymCard from '../Components/GymData/GymCard';
+import PlanCard from '../Components/MyPlanData/PlanCard';
 
 
 const PlanPage = () => {
@@ -16,14 +17,16 @@ const PlanPage = () => {
 <div className="tabs tabs-border">
   <input type="radio" name="my_tabs_2" className="tab" aria-label="Today's Plan" defaultChecked />
   <div className="tab-content border-base-300 bg-base-100 p-10">
-    <div className="grid grid-cols-1 gap-5 w-fit">
-    {isToday.map((gym:IGymData)=><GymCard key={gym.id} gym={gym} ></GymCard>)}</div>
+      <div className='grid grid-cols-1 gap-4'>
+    {isToday.map((gym:IGymData)=><PlanCard key={gym.id} gym={gym} ></PlanCard>)}
+    </div>
     </div>
 
   <input type="radio" name="my_tabs_2" className="tab" aria-label="Saved"/>
   <div className="tab-content border-base-300 bg-base-100 p-10">
-    <div className="grid grid-cols-1 gap-5 w-fit">
-    {isSaved.map((gym:IGymData)=><GymCard key={gym.id} gym={gym} ></GymCard>)}</div>
+    <div className='grid grid-cols-1 gap-4'>
+    {isSaved.map((gym:IGymData)=><PlanCard key={gym.id} gym={gym} ></PlanCard>)}
+    </div>
     </div>
 </div>
 </div>
