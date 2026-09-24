@@ -15,7 +15,7 @@ const page = async({
        <div className='container mx-auto my-7 px-4'>
   <div className="flex flex-col mx-auto md:flex-row gap-6 md:gap-10 bg-[#121318] text-white p-6 rounded-2xl w-full md:w-fit font-sans">
 
-    <div className="flex-1 md:max-w-[400px]">
+    <div className="flex-1 md:max-w-100">
       <Image
         src={data.image}
         alt={data.name}
