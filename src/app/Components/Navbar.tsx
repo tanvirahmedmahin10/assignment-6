@@ -46,6 +46,7 @@ const Navbar = () => {
             <SavedButton></SavedButton>
           </div>
         </div>
+        <div className="divider"></div>
       </div>
     );
 };
