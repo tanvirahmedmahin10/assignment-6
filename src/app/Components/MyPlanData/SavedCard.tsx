@@ -3,8 +3,6 @@ import { Flame, Star, Timer } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import MarkAsDoneButton from './PlanButtons/MarkAsDoneButton';
-import RemoveButton from './PlanButtons/RemoveButton';
 import RemoveButtonForSaved from './PlanButtons/RemoveButtonForSaved';
 
 const SavedCard = ({ gym }: { gym: IGymData }) => {

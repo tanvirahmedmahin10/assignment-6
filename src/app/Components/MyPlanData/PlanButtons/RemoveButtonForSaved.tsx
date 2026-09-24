@@ -1,7 +1,6 @@
 'use client'
 import { GymContext } from '@/app/GymContext/Context';
 import { IGymData } from '@/gym.type';
-import { Istok_Web } from 'next/font/google';
 import React, { useContext } from 'react';
 import { toast } from 'react-toastify';
 
