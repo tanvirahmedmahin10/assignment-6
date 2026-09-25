@@ -1,32 +1,27 @@
 'use client'
 
+import { GymContext } from '@/app/GymContext/Context';
 import { IGymData } from '@/gym.type';
 import { Check } from 'lucide-react';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { toast } from 'react-toastify';
 
 const MarkAsDoneButton = ({ gym }: { gym: IGymData }) => {
+  const {isToday,setIsToday}=useContext(GymContext)
 
-  const [isMarked, setIsMarked] = useState<boolean>(false);
-  
-
-  const handleOnRead = () => {
-   if(isMarked){
-    toast.error(`${gym.name} is already marked as done`);
-     return
-   }
-   setIsMarked(true);
-    toast.success(`${gym.name} is marked as done`);
-    
-  };
+  const removedData=isToday.filter(del=>del.id!==gym.id)
+     const handelRemove=()=>{
+      setIsToday(removedData)
+      toast.success(`${gym.name} is Marked as Done`)
+     }
 
   return (
     <div>
       <button
-        onClick={handleOnRead}
+        onClick={handelRemove}
         className="flex rounded-xl bg-[#C2F800] px-4 py-2 text-xs font-bold text-slate-950 cursor-pointer"
       >
-        <Check className="h-4 w-4"/> {isMarked ? 'Marked' : `Mark as Done`}
+        <Check className="h-4 w-4"/>Mark as Done
       </button>
     </div>
   );
