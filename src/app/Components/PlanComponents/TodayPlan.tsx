@@ -10,7 +10,7 @@ const TodayPlan = ({ data }: { data: IGymData }) => {
     const dupliData = isToday.find(dup => dup.id === data.id)
     const handleOnToday = () => {
         if (dupliData) {
-            toast.error('Duplicate Detected')
+            toast.error(`${data.name} is Already Added to Today's Plan`)
             return
         }
         setIsToday([...isToday, data])
@@ -18,7 +18,7 @@ const TodayPlan = ({ data }: { data: IGymData }) => {
     }
     return (
         <div>
-            <button onClick={handleOnToday} className={dupliData?'bg-[#ff0800] text-white text-xs font-bold px-4 py-2 rounded-lg cursor-not-allowed':"bg-[#ccff00] text-black text-xs font-bold px-4 py-2 rounded-lg "}>
+            <button onClick={handleOnToday} className={dupliData?'bg-[#ff0800] text-white text-xs font-bold px-4 py-2 rounded-lg cursor-not-allowed':"bg-[#ccff00] text-black text-xs font-bold px-4 py-2 rounded-lg cursor-pointer "}>
                 {dupliData?'Already Added':`Add to today's plan`}
             </button>
         </div>
