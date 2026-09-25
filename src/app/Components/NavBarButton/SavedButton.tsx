@@ -12,7 +12,7 @@ const SavedButton = () => {
                 href="/myplan"
                 className="flex items-center gap-2 font-medium text-white"
             >
-                <span>Plan</span>
+                <span>Saved</span>
 
                 <span className="flex min-w-6 h-6 items-center justify-center rounded-full border border-gray-600 px-2 text-xs font-bold text-white">
                     {isSaved?.length || 0}
