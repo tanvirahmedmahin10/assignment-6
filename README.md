@@ -7,11 +7,11 @@ FitLog is a modern, dark-themed fitness companion app designed to help users exp
 ---
 
 ## 📖 Table of Contents
-- [About the Project]
-- [Tech Stack]
-- [Key Features]
-- [Getting Started]
-- [License]
+- About the Project
+- Tech Stack
+- Key Features
+- Getting Started
+- License
 
 ---
 
