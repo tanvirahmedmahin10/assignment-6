@@ -5,7 +5,7 @@ import Image from 'next/image';
 import ActivationLink from './ActivationLink';
 
 import SavedButton from './NavBarButton/SavedButton';
-import PlanButton from './NavBarButton/PlanButton2'; // Fixed casing from planbutton to PlanButton
+import PlanButton from './NavBarButton/PlanButton2';
 
 const Navbar = () => {
     return (
