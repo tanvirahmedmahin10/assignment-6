@@ -4,7 +4,7 @@ import { IGymData } from '@/gym.type';
 import Link from 'next/link';
 
 export const gymPromise=async()=>{
- const res=await fetch('https://api.abcz.workers.dev/api/fitlog')
+ const res=await fetch('https://api.api-store.workers.dev/api/fitlog')
  return res.json()
 }
 const GymMap = async() => {

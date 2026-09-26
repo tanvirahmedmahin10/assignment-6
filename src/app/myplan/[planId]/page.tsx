@@ -9,7 +9,7 @@ const page = async({
   params: Promise<{ planId: string }>;
 }) => {
     const { planId } = await params;
-    const res=await fetch(`https://api.abcz.workers.dev/api/fitlog/${planId}`) 
+    const res=await fetch(`https://api.api-store.workers.dev/api/fitlog/${planId}`) 
     if (!res.ok) {
     notFound();
   }
