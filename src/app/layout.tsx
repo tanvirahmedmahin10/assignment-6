@@ -31,7 +31,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className={`min-h-full flex flex-col`}>
-        <div className='bg-black/80 pb-1'>
+        <div className='bg-black/75 pb-1'>
         <GymPovider>
           
           <Navbar></Navbar>
