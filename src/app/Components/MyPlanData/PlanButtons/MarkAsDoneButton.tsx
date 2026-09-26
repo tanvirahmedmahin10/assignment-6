@@ -3,7 +3,7 @@
 import { GymContext } from '@/app/GymContext/Context';
 import { IGymData } from '@/gym.type';
 import { Check } from 'lucide-react';
-import React, { useContext, useState } from 'react';
+import React, { useContext} from 'react';
 import { toast } from 'react-toastify';
 
 const MarkAsDoneButton = ({ gym }: { gym: IGymData }) => {
