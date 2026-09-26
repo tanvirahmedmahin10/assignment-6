@@ -1,6 +1,7 @@
 'use client'
 import { GymContext } from '@/app/GymContext/Context';
 import { IGymData } from '@/gym.type';
+import { CalendarPlus } from 'lucide-react';
 import React, { useContext } from 'react';
 import { toast } from 'react-toastify';
 
@@ -18,8 +19,9 @@ const TodayPlan = ({ data }: { data: IGymData }) => {
     }
     return (
         <div>
-            <button onClick={handleOnToday} className={dupliData?'bg-[#ff0800] text-white text-xs font-bold px-4 py-2 rounded-lg cursor-not-allowed':"bg-[#ccff00] text-black text-xs font-bold px-4 py-2 rounded-lg cursor-pointer "}>
+            <button onClick={handleOnToday} className={dupliData?'bg-[#ff0800] text-white text-xs font-bold px-4 py-2 rounded-lg cursor-not-allowed':"bg-[#ccff00] text-black text-xs font-bold px-4 py-2 rounded-lg cursor-pointer "}><div className='flex gap-1'><CalendarPlus className='h-4 w-4'></CalendarPlus>
                 {dupliData?'Already Added':`Add to today's plan`}
+                </div>
             </button>
         </div>
     );

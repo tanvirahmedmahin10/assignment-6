@@ -1,6 +1,7 @@
 'use client'
 import { GymContext } from '@/app/GymContext/Context';
 import { IGymData } from '@/gym.type';
+import { Bookmark } from 'lucide-react';
 import React, { useContext } from 'react';
 import { toast } from 'react-toastify';
 
@@ -17,8 +18,9 @@ const Saved = ({data}:{data:IGymData}) => {
     }
     return (
         <div>
-            <button onClick={handleOnSaved} className={dupliData?'bg-[#1f7be4] text-white text-xs px-4 py-2 rounded-lg cursor-not-allowed':"border border-gray-700 text-white text-xs px-4 py-2 rounded-lg cursor-pointer"}>
+            <button onClick={handleOnSaved} className={dupliData?'bg-[#1f7be4] text-white text-xs px-4 py-2 rounded-lg cursor-not-allowed':"border border-gray-700 text-white text-xs px-4 py-2 rounded-lg cursor-pointer"}><div className='flex gap-1'><Bookmark className='h-4 w-4'/>
             {dupliData?'Already Saved':`Save for Later`}
+            </div>
           </button>
         </div>
     );
