@@ -4,11 +4,11 @@ import Image from 'next/image';
 
 const Footer = () => {
   return (
-    <footer className="w-full mt-auto">
-       <div className="bg-black">
-      <div className="divider h-0 mt-17 sm:mt-20"></div>
+    <footer className="w-full bg-black text-white mt-auto">
+     
+      <div className="border-t border-slate-800 mt-16 sm:mt-20"></div>
       
-      <div className="my-6 sm:mb-10 container mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+      <div className="py-6 sm:pb-10 container mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
         <div className="flex gap-2 items-center justify-center">
           <Image 
             src={logo}
@@ -23,9 +23,7 @@ const Footer = () => {
           © 2026 FitLog — Workout Library. Train hard, log honest
         </p>
       </div>
-      </div>
     </footer>
-    
   );
 };
 

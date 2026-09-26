@@ -39,10 +39,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             {children}
           </main>
           <ToastContainer />
+          
           <Footer></Footer>
+          
         </GymPovider>
+        
         </div>
+        
       </body>
+      
     </html>
   );
 }
