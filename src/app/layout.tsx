@@ -33,6 +33,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className={`min-h-full flex flex-col`}>
         <div className='bg-black pb-1'>
         <GymPovider>
+          
           <Navbar></Navbar>
           <main className={`${oswald.className}`}>
             {children}

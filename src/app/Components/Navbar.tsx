@@ -9,7 +9,7 @@ import PlanButton from './NavBarButton/PlanButton2';
 
 const Navbar = () => {
     return (
-      <div>
+      <div className='sticky top-0 z-50 bg-black'>
       <div className='container mx-auto'>
         <div className="navbar shadow-sm">
           <div className="navbar-start">
@@ -49,7 +49,7 @@ const Navbar = () => {
         </div>
         
       </div>
-      <div className="divider"></div>
+      <div className="divider m-0 min-h-0 h-px"></div>
       </div>
     );
 };
