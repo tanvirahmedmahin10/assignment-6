@@ -27,10 +27,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="en"
+      lang="en" data-theme='dark'
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className={`min-h-full flex flex-col`}>
+        <div className='bg-black pb-1'>
         <GymPovider>
           <Navbar></Navbar>
           <main className={`${oswald.className}`}>
@@ -39,6 +40,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <ToastContainer />
           <Footer></Footer>
         </GymPovider>
+        </div>
       </body>
     </html>
   );

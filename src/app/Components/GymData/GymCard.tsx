@@ -5,7 +5,7 @@ import React from 'react';
 
 const GymCard = ({gym}:{gym:IGymData}) => {
     return (
-       <div className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 dark:border-slate-800 dark:bg-slate-900">
+       <div className="group overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 shadow-sm transition-all duration-300">
       <div className="relative h-80 w-full overflow-hidden bg-slate-100 dark:bg-slate-800">
         <Image
           src={gym.image}
@@ -35,12 +35,11 @@ const GymCard = ({gym}:{gym:IGymData}) => {
           </div>
         )}
 
-        <h3 className="text-lg font-bold text-slate-900 line-clamp-1 dark:text-white">
+        <h3 className="line-clamp-1 text-lg font-bold text-white">
           {gym.name}
         </h3>
         {gym.equipment && (
-          <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">
-            <span className="font-medium text-slate-700 dark:text-slate-300">Equipment:</span>{' '}
+          <p className="mt-1 text-xs text-slate-500 dark:text-slate-300">
             {gym.equipment}
           </p>
         )}
