@@ -2,7 +2,7 @@ import Saved from '@/app/Components/PlanComponents/Saved';
 import TodayPlan from '@/app/Components/PlanComponents/TodayPlan';
 import Image from 'next/image';
 import React from 'react';
-
+import { notFound } from 'next/navigation';
 const page = async({
   params,
 }: {
@@ -10,6 +10,9 @@ const page = async({
 }) => {
     const { planId } = await params;
     const res=await fetch(`https://api.abcz.workers.dev/api/fitlog/${planId}`) 
+    if (!res.ok) {
+    notFound();
+  }
     const data=await res.json()
     return (
        <div className='container mx-auto my-7 px-4'>

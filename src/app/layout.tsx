@@ -27,27 +27,25 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="en" data-theme='dark'
+      lang="en"
+      data-theme="dark"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className={`min-h-full flex flex-col`}>
-        <div className='bg-black/75 pb-1'>
-        <GymPovider>
-          
-          <Navbar></Navbar>
-          <main className={`${oswald.className}`}>
-            {children}
-          </main>
-          <ToastContainer />
-          
-          <Footer></Footer>
-          
-        </GymPovider>
-        
+      <body className="min-h-screen flex flex-col">
+        <div className="min-h-screen flex flex-col bg-black/75">
+          <GymPovider>
+            <Navbar />
+
+            <main className={`flex-1 ${oswald.className}`}>
+              {children}
+            </main>
+
+            <ToastContainer />
+
+            <Footer />
+          </GymPovider>
         </div>
-        
       </body>
-      
     </html>
   );
 }
