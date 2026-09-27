@@ -7,6 +7,7 @@ import PlanCard from '../Components/MyPlanData/PlanCard';
 import SavedCard from '../Components/MyPlanData/SavedCard';
 import Link from 'next/link';
 import Calculation from '../Components/Calculation';
+import { ChevronDown } from 'lucide-react';
 
 
 const PlanPage = () => {
@@ -103,18 +104,23 @@ const PlanPage = () => {
   </div>
   <div className='flex ml-auto gap-2 items-center'>
   <h2>Sort By</h2>
-  <select
-  value={isSort}
-  onChange={(e)=>SetIsSort(e.target.value as 'Duration'|'Calories'|'Rating' )}
-    className="select w-fit"
-  >
-    <option value={'Duration'}>Duration</option>
-    <option value={'Calories'}>Calories</option>
-    <option value={'Rating'}>Rating</option>
-  </select>
+  
+  <div className="relative flex items-center">
+    <select
+      value={isSort}
+      onChange={(e) => SetIsSort(e.target.value as 'Duration' | 'Calories' | 'Rating')}
+      className="select w-fit bg-none pr-8 cursor-pointer"
+    >
+      <option value={'Duration'}>Duration</option>
+      <option value={'Calories'}>Calories</option>
+      <option value={'Rating'}>Rating</option>
+    </select>
+    <ChevronDown className="w-4 h-4 absolute right-2.5 pointer-events-none text-gray-400" />
+  </div>
 </div>
 </div>
 </div>
+
     );
 };
 
